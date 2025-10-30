@@ -1,0 +1,29 @@
+{
+  "name": "aulats",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "pm2:start": "pm2 start dist/server.js --name api-barbeiro",
+    "pm2:stop": "pm2 stop api-barbeiro",
+    "pm2:restart": "pm2 restart api-barbeiro",
+    "pm2:delete": "pm2 delete api-barbeiro",
+    "pm2:logs": "pm2 logs api-barbeiro",
+    "pm2:status": "pm2 status"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

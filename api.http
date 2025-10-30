@@ -1,0 +1,72 @@
+### USUÁRIOS
+
+### Listar todos os usuários
+GET http://localhost:3000/usuarios
+
+###
+
+### Criar usuário
+POST http://localhost:3000/usuarios
+content-type: application/json
+
+{
+  "nome": "João Silva",
+  "telefone": "11999999999",
+  "email": "joao@email.com",
+  "senha": "senha123",
+  "idade": 30
+}
+
+###
+
+### Criar outro usuário
+POST http://localhost:3000/usuarios
+content-type: application/json
+
+{
+  "nome": "Maria Santos",
+  "telefone": "11988888888",
+  "email": "maria@email.com",
+  "senha": "senha456",
+  "idade": 25
+}
+
+###
+
+### Editar usuário
+PUT http://localhost:3000/usuarios/joao@email.com
+content-type: application/json
+
+{
+  "nome": "João Silva Santos",
+  "telefone": "11977777777",
+  "idade": 31
+}
+
+###
+
+### Autenticar usuário
+POST http://localhost:3000/usuarios/autenticacao
+content-type: application/json
+
+{
+  "email": "joao@email.com",
+  "senha": "senha123"
+}
+
+###
+
+### Buscar usuários por nome (retorna lista)
+GET http://localhost:3000/usuarios/buscar?nome=João
+
+###
+
+### Buscar usuários por idade exata (retorna lista)
+GET http://localhost:3000/usuarios/buscar?idade=30
+
+###
+
+### Buscar usuários por faixa etária (retorna lista)
+GET http://localhost:3000/usuarios/buscar?idadeMin=25&idadeMax=35
+
+###
